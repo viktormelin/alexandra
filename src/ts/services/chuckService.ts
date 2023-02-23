@@ -4,9 +4,15 @@ export interface IChuckJoke {
   value: string;
 }
 
-export const getChuckJoke = async (): Promise<string> => {
+const getChuckJoke = async (): Promise<string> => {
+  console.log('running');
+  
   const response = await axios
   .get<IChuckJoke>("https://api.chucknorris.io/jokes/random");
   const joke = response.data.value;
+  console.log(response);
+  
   return joke;
 }
+
+export default getChuckJoke
