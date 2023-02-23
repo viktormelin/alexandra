@@ -1,0 +1,26 @@
+.header {
+        font-family: 'DynaPuff', cursive;
+        width: fit-content;
+        background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 4rem;
+}
+
+.categoryPickerLabel {
+    font-size: 2rem;
+}
+
+select {
+font-size: 2rem;
+}
+
+button {
+    font-size: 2rem;
+}
+
+.jokebox {
+    display: flex;
+    padding: 3rem;
+    font-size: 2rem;
+}

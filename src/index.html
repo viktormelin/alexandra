@@ -4,9 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="scss/main.scss">
+
     <title>Document</title>
 </head>
 <body>
-    
+    <h1 class="header" aria-label="Alexandras skämtgenerator">Alexandras skämtgenerator</h1>
+      <label class="categoryPickerLabel" for="categoryPicker">Välj kategori:</label>
+      <select name="categoryPicker" id="categoryPicker">
+        <option value="Chuck Norris">Chuck Norris</option>
+        <option value="Mörk humor">Mörk humor</option>
+        <option value="Nördig humor">Nördig humor</option>
+        <option value="Matskämt">Matskämt</option>
+      </select>
+        <button aria-label="generera skämt">Generera skämt</button>  
+        <div class="jokebox"></div>
+
+        <script src="ts/main.ts" type="module"></script>
 </body>
 </html>
