@@ -22,7 +22,7 @@ const humorService = async (category: string) => {
   const { jokes } = response.data;
 
   if (jokes && jokes.length > 0) {
-    return jokes;
+    return jokes[0].joke;
   }
 
   return getChuckJoke();
