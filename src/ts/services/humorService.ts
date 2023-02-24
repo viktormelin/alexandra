@@ -12,7 +12,7 @@ interface HumorResponse {
 }
 
 const API_KEY = '822f0f7d31af4669a46367b6600adfa1';
-const API_URL = 'https://api.humorapi.com/jokes/search';
+const API_URL = 'https://api.humorapi.com/jokes/random';
 
 const humorService = async (category: string) => {
   const response = await axios.get<HumorResponse>(API_URL, {
@@ -21,11 +21,13 @@ const humorService = async (category: string) => {
 
   const { jokes } = response.data;
 
+  console.log(response.data)
+
   if (jokes && jokes.length > 0) {
     return jokes[0].joke;
   }
 
-  return getChuckJoke();
+  //return getChuckJoke();
 };
 
 export default humorService;

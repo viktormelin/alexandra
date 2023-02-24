@@ -12,7 +12,12 @@ function addEventListeners() {
 }
 
 const generateJoke = async () => {  
-  // let selectedCategory: string = (document.querySelector('.categoryPicker') as HTMLOptionElement).value;
+  let selectedCategory: string = (document.querySelector('option') as HTMLOptionElement).value;
+  console.log(selectedCategory); 
+  if (selectedCategory == 'Mörk humor') {
+    console.log(selectedCategory);
+    let randomJoke: string = await humorService("dark");
+  }
   let joke: string = await getChuckJoke();  
   printHtml(joke);
 }
