@@ -1,14 +1,41 @@
 .header {
         font-family: 'DynaPuff', cursive;
         width: fit-content;
-        background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+        background-image: linear-gradient(to left, indigo, blue);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        font-size: 4rem;
+        font-size: 3.5rem;
+        text-align: center;
+
+}
+
+body {
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(182,167,184,1) 63%, rgba(158,186,230,1) 89%, rgba(148,187,233,1) 100%);
+    background-repeat: no-repeat;
+    height: 100vh;
 }
 
 .categoryPickerLabel {
     font-size: 2rem;
+}
+
+.categoryPicker {
+    margin: 2rem;
+}
+
+button {
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    border: none;
+    background-color: blue;
+    color: whitesmoke;
+
+    &:hover, &:active {
+    background-color: indigo;
+    scale: 1.1;
+    }
 }
 
 select {
@@ -23,4 +50,13 @@ button {
     display: flex;
     padding: 3rem;
     font-size: 2rem;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
 }
