@@ -11,6 +11,8 @@ interface HumorResponse {
   available: number;
 }
 
+// Unused: 93ad8dbe02914bd3bbef0bb68dc97ea3
+// Unused: fbd81e2538544bd0b61029c9db41ba98
 const API_KEY = '8af71b3cd40c443487cecbe842efc0f6';
 const API_URL = 'https://api.humorapi.com/jokes/search';
 
