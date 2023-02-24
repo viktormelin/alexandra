@@ -11,12 +11,12 @@ function addEventListeners() {
   button.addEventListener('click', generateJoke);
 }
 
-const generateJoke = async () => {  
+const generateJoke = async () => {
   let selectedCategory: string = (document.querySelector('option') as HTMLOptionElement).value;
   console.log(selectedCategory); 
   if (selectedCategory == 'Mörk humor') {
     console.log(selectedCategory);
-    let randomJoke: string = await humorService("dark");
+    // let randomJoke: string = await humorService("dark");
   }
   let joke: string = await getChuckJoke();  
   printHtml(joke);

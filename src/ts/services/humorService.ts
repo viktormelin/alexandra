@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { getChuckJoke } from './chuckService';
+// import { getChuckJoke } from './chuckService';
 
 export interface Joke {
   id: number;

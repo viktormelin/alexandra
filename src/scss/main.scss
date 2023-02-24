@@ -1,17 +1,17 @@
 .header {
-        font-family: 'DynaPuff', cursive;
-        width: fit-content;
-        background-image: linear-gradient(to left, indigo, blue);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-size: 3.5rem;
-        text-align: center;
+    font-family: 'DynaPuff', cursive;
+    width: fit-content;
+    background-image: linear-gradient(to left, indigo, blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 3.5rem;
+    text-align: center;
 
 }
 
 body {
-    background: rgb(238,174,202);
-    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(182,167,184,1) 63%, rgba(158,186,230,1) 89%, rgba(148,187,233,1) 100%);
+    background: rgb(238, 174, 202);
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(182, 167, 184, 1) 63%, rgba(158, 186, 230, 1) 89%, rgba(148, 187, 233, 1) 100%);
     background-repeat: no-repeat;
     height: 100vh;
 }
@@ -32,14 +32,15 @@ button {
     background-color: blue;
     color: whitesmoke;
 
-    &:hover, &:active {
-    background-color: indigo;
-    scale: 1.1;
+    &:hover,
+    &:active {
+        background-color: indigo;
+        scale: 1.1;
     }
 }
 
 select {
-font-size: 2rem;
+    font-size: 2rem;
 }
 
 button {
@@ -59,4 +60,9 @@ button {
     align-items: center;
     max-width: 600px;
     margin: 0 auto;
+}
+
+.button-box {
+    display: flex;
+    gap: 20px;
 }
