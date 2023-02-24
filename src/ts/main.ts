@@ -19,18 +19,13 @@ function addEventListeners() {
 
 const generateJoke = async () => {
   let selectedCategory: string = (document.querySelector('#categoryPicker') as HTMLOptionElement).value;
-  console.log(selectedCategory); 
-  if (selectedCategory == 'Mörk humor') {
-    console.log(selectedCategory);
-    let humorJoke: string = await humorService("dark");
-    printHtml(humorJoke);
-  }
-  else {
+  if (selectedCategory == 'Chuck Norris') {
     let joke: string = await getChuckJoke();  
     printHtml(joke);
-
+  } else {
+    let humorJoke: string = await humorService(selectedCategory);
+    printHtml(humorJoke);
   }
-  
 }
 
 function printHtml(jokeText: string) {
@@ -42,14 +37,12 @@ function addPoint() {
   const pointCounter = document.querySelector('#counter') as HTMLParagraphElement;
   points += 1;
   pointCounter.innerText = points.toString();
-  console.log(points);
 }
 
 function removePoint() {
   const pointCounter = document.querySelector('#counter') as HTMLParagraphElement;
   points -= 1;
   pointCounter.innerText = points.toString();
-  console.log(points);
 }
 
 const colorTheme: HTMLBodyElement | null = document.querySelector("body");

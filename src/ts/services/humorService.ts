@@ -11,7 +11,7 @@ interface HumorResponse {
   available: number;
 }
 
-const API_KEY = '8bf9af0888a648cf8f85de7e1eeaaa6b';
+const API_KEY = '8af71b3cd40c443487cecbe842efc0f6';
 const API_URL = 'https://api.humorapi.com/jokes/search';
 
 const humorService = async (category) => {
@@ -20,14 +20,10 @@ const humorService = async (category) => {
   });
 
   let randomNumber: number = Math.floor((Math.random() * 10) + 1);
-  console.log(randomNumber);
 
   const { jokes } = response.data;
 
-  console.log(response.data)
-
   return jokes[randomNumber].joke
-
 };
 
 export default humorService;
