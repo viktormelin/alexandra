@@ -11,23 +11,23 @@ interface HumorResponse {
   available: number;
 }
 
-const API_KEY = '822f0f7d31af4669a46367b6600adfa1';
-const API_URL = 'https://api.humorapi.com/jokes/random';
+const API_KEY = '8bf9af0888a648cf8f85de7e1eeaaa6b';
+const API_URL = 'https://api.humorapi.com/jokes/search';
 
-const humorService = async (category: string) => {
+const humorService = async (category) => {
   const response = await axios.get<HumorResponse>(API_URL, {
-    params: { 'api-key': API_KEY, number: 1, 'include-tags': category },
+    params: { 'api-key': API_KEY, number: 10, 'include-tags': category },
   });
+
+  let randomNumber: number = Math.floor((Math.random() * 10) + 1);
+  console.log(randomNumber);
 
   const { jokes } = response.data;
 
   console.log(response.data)
 
-  if (jokes && jokes.length > 0) {
-    return jokes[0].joke;
-  }
+  return jokes[randomNumber].joke
 
-  //return getChuckJoke();
 };
 
 export default humorService;

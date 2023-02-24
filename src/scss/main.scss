@@ -66,9 +66,19 @@ button {
 
 .button-box {
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 20px;
+    font-size: 3rem;
+
+    button {
+        cursor: pointer;
+    }
 }
 
+.point-info {
+    font-size: 2rem;
+}
 
 body.change {
     background: black;
