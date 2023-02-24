@@ -5,7 +5,6 @@ export interface IChuckJoke {
 }
 
 const getChuckJoke = async (): Promise<string> => {
-  console.log('running');
   
   const response = await axios
   .get<IChuckJoke>("https://api.chucknorris.io/jokes/random");
