@@ -64,5 +64,8 @@ button {
 
 .button-box {
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 20px;
+    font-size: 3rem;
 }
