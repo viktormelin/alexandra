@@ -11,10 +11,12 @@ function addEventListeners() {
   let button = document.querySelector('#getJoke') as HTMLButtonElement;
   const addBtn = document.querySelector('#add') as HTMLButtonElement;
   const removeBtn = document.querySelector('#remove') as HTMLButtonElement;
+  const colorToggleBtn: HTMLButtonElement | null = document.querySelector(".colortoggleicon");
 
   addBtn.addEventListener('click', addPoint);
   removeBtn.addEventListener('click', removePoint);
   button.addEventListener('click', generateJoke);
+  colorToggleBtn?.addEventListener('click', toggleColorMode);
 }
 
 const generateJoke = async () => {
@@ -45,12 +47,10 @@ function removePoint() {
   pointCounter.innerText = points.toString();
 }
 
-const colorTheme: HTMLBodyElement | null = document.querySelector("body");
-const colorModeIcon: HTMLSpanElement | null = document.querySelector(".light-mode-icon");
-const colorToggleBtn: HTMLButtonElement | null = document.querySelector(".colortoggleicon");
-
 function toggleColorMode() {
-  console.log(colorTheme)
+  const colorTheme: HTMLBodyElement | null = document.querySelector("body");
+  const colorModeIcon: HTMLSpanElement | null = document.querySelector(".light-mode-icon");
+
   if (colorTheme && colorModeIcon) {
   colorTheme.classList.toggle('change');
   if (colorTheme.classList.contains('change')) {
@@ -60,7 +60,5 @@ function toggleColorMode() {
   }
 }
 };
-colorToggleBtn?.addEventListener('click', toggleColorMode);
-
 
 init();
